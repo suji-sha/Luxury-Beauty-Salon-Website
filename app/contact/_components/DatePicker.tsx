@@ -26,7 +26,7 @@ export function DatePicker() {
           <Button
             variant="outline"
             id="date"
-            className="w-full justify-between font-normal text-gray-500 bg-pink-50"
+            className="w-full justify-between font-normal text-gray-500 bg-brand-bg"
           >
             {date ? date.toLocaleDateString() : "Appointment Date *"}
             <ChevronDownIcon />

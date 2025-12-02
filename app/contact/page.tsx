@@ -45,46 +45,50 @@ export default function contactpage() {
       </section>
 
       {/* second section   */}
-      <section className="py-16 px-16 bg-white">
+      <section className="py-16 px-6 bg-brand-bg">
         <div className=" container grid grid-cols-[40%_60%] gap-6 items-start m-10">
           {/* left side section  */}
-          <Card className="bg-pink-50 h-full pt-0 overflow-hidden">
-            <CardHeader className="bg-white text-yellow-800 p-2 rounded-t-lg">
-              <div className="flex items-center">
-                <CardTitle className="text-xl">Quick Contact</CardTitle>
+          <Card className="bg-brand-secondary h-full pt-0 pb-0 overflow-hidden">
+            <CardHeader className="bg-brand-secondary text-brand-text p-2 gap-0 rounded-t-lg">
+              <div className=" items-center">
+                <CardTitle className="text-3xl text-center">
+                  Quick Contact
+                </CardTitle>
               </div>
             </CardHeader>
             <CardContent>
-              <p className="p-4">
+              <p className="pb-3 text-brand-text">
                 Experience the best salon services in your services
               </p>
               <ul className="space-y-3">
-                <li className="flex items-center gap-2 text-gray-700">
-                  <Phone className="size-4 text-pink-400" />
+                <li className="flex items-center gap-2 text-brand-text">
+                  <Phone className="size-4 text-brand-cta" />
                   <span className="text-sm">9876543212</span>
                 </li>
-                <li className="flex items-center gap-2 text-gray-700">
-                  <Mail className="size-4 text-pink-400" />
+                <li className="flex items-center gap-2 text-brand-text">
+                  <Mail className="size-4 text-brand-cta" />
                   <span className="text-sm">beauty@gmail.com</span>
                 </li>
-                <li className="flex items-center gap-2 text-gray-700">
-                  <MapPin className="size-4 text-pink-400" />
+                <li className="flex items-center gap-2 text-brand-text">
+                  <MapPin className="size-4 text-brand-cta" />
                   <span className="text-sm">Bhaktapur</span>
                 </li>
-                <li className="flex items-start gap-2 text-gray-700">
-                  <Clock className="size-4 text-pink-400" />
+                <li className="flex items-start gap-2 text-brand-text">
+                  <Clock className="size-4 text-brand-cta" />
                   <span className="text-sm">Mon-Sat :</span>
                   <div className="flex flex-col">
                     <span> 10am to 8pm </span>
-                    <span className="text-sm text-pink-400">Sunday Closed</span>
+                    <span className="text-sm text-brand-cta">
+                      Sunday Closed
+                    </span>
                   </div>
                 </li>
               </ul>
 
               {/* Avatar */}
-              <div className="border border-gray-200 m-3"></div>
+              <div className="border border-brand m-4 "></div>
               <div className="p-2">
-                <li className="flex items-center gap-4 text-gray-700">
+                <li className="flex items-center gap-4 text-brand-text">
                   {/* Facebook */}
                   <Avatar className="bg-white shadow-md border">
                     <AvatarFallback className="bg-white">
@@ -119,17 +123,19 @@ export default function contactpage() {
 
           {/* right side section*/}
 
-          <Card className="bg-pink-50 h-full w-full pt-0 pb-2  overflow-hidden">
-            <CardHeader className="bg-white text-yellow-800 p-2 rounded-t-lg">
-              <div className="flex items-start">
-                <CardTitle className="text-xl">Book Your Appointment</CardTitle>
+          <Card className="bg-brand-secondary h-full w-full pt-0 pb-2  overflow-hidden">
+            <CardHeader className="bg-brand-secondary text-brand-text gap-0 rounded-t-lg">
+              <div className="items-center ">
+                <CardTitle className="text-3xl p-2 text-center ">
+                  Book Your Appointment
+                </CardTitle>
               </div>
             </CardHeader>
             <CardContent>
               <div className=" container grid grid-cols-2 gap-4 items-start ">
                 {/*left side select */}
                 <Select>
-                  <SelectTrigger className="w-full">
+                  <SelectTrigger className="w-full bg-brand-bg">
                     <SelectValue placeholder="Select Service" />
                   </SelectTrigger>
                   <SelectContent>
@@ -151,7 +157,7 @@ export default function contactpage() {
                 </Select>
                 {/* right side select */}
                 <Select>
-                  <SelectTrigger className="w-full">
+                  <SelectTrigger className="w-full bg-brand-bg">
                     <SelectValue placeholder="Have you visited US before" />
                   </SelectTrigger>
                   <SelectContent>
@@ -163,17 +169,17 @@ export default function contactpage() {
                   </SelectContent>
                 </Select>
                 {/* Input for Name */}
-                <div>
+                <div className="bg-brand-bg rounded-lg ">
                   <Input type="Name" placeholder="Enter Name *" />
                 </div>
                 {/* appointment */}
                 <DatePicker />
                 {/* Input for Email */}
-                <div>
+                <div className="bg-brand-bg rounded-lg">
                   <Input type="Email" placeholder="Enter Email *" />
                 </div>
                 {/* Input for Address */}
-                <div>
+                <div className="bg-brand-bg rounded-lg">
                   <Input type="Address" placeholder="Enter Address *" />
                 </div>
                 <div className="col-span-2">
@@ -181,13 +187,14 @@ export default function contactpage() {
                   <Textarea
                     id="checkout-7j9-optional-comments"
                     placeholder="Add your Messages"
-                    className="resize-none"
+                    className="resize-none bg-brand-bg"
                   />
                 </div>
                 {/* button */}
-                <div className="flex flex-wrap items-center bg-pink-50 gap-2 md:flex-row ">
-                  <Button variant="outline">Click to Send</Button>
-                </div>
+
+                <Button className=" w-30 transition-all duration-300 hover:opacity-90 bg-brand-cta">
+                  Click to Send
+                </Button>
               </div>
             </CardContent>
           </Card>

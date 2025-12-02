@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <div className=" bg-amber-100 text-center text-gray-500 mt-10 border-t border-amber-100 py-5 px-5 text-sm">
-      © 2025 Beauty Studio. All rights reserved.
+    <div className=" bg-brand-footer text-center text-white mt-10 border-t border-brand py-5 px-5 text-sm">
+      © 2025 Luxury Beauty Salon. All rights reserved.
     </div>
   );
 }

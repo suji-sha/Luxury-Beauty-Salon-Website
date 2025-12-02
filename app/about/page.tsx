@@ -8,28 +8,29 @@ import {
 } from "@/components/ui/carousel";
 export default function AboutPage() {
   return (
-    <div className="space-y-16">
+    <div className="space-y-16 bg-brand-bg">
       {/* Hero Section with Background Image */}
       <section className="relative h-[500px]">
         {/* Background Image */}
-        <div className="absolute inset-0 bg-[url('/image/6.jpg')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-[url('/image/32.jpg')] bg-cover bg-center"></div>
 
         {/* Overlay Text */}
         <div className="relative z-10 h-full flex items-center justify-start px-10">
           <div className="max-w-xl">
-            <h1 className="text-3xl md:text-4xl font-bold text-yellow-300">
+            {/* <h1 className="text-3xl md:text-4xl font-bold text-brand-cta">
               We bring out your natural beauty through professional makeup
               crafted with care and creativity.
-            </h1>
+            </h1> */}
           </div>
         </div>
       </section>
 
       {/* Secondary Section */}
-      <section className=" bg-white">
+      {/* 1 section */}
+      <section className="bg-brand-bg">
         <div className=" container grid grid-cols-[40%_60%] gap-6 items-start m-20">
           {/* Left side card */}
-          <Card className="p-0 h-96">
+          <Card className="p-0 h-96 ">
             <CardContent className="p-0 h-full">
               <div className="h-full w-full">
                 <img
@@ -40,11 +41,12 @@ export default function AboutPage() {
               </div>
             </CardContent>
           </Card>
-
           {/* Right side content */}
           <div className="space-y-4">
-            <h2 className="text-xl font-bold">The Art of Makeup</h2>
-            <p className="text-gray-600 text-justify">
+            <h2 className="text-xl font-bold text-brand-text">
+              The Art of Makeup
+            </h2>
+            <p className="text-brand-muted text-justify">
               Makeup is a creative way to enhance natural beauty, boost
               confidence, and express personal style. Whether it’s a subtle
               everyday look or a bold, glamorous makeover, makeup allows people
@@ -54,7 +56,7 @@ export default function AboutPage() {
               individuality.
             </p>
 
-            <ul className="list-disc pl-5 space-y-2 text-gray-700">
+            <ul className="list-disc pl-5 space-y-2 text-brand-text">
               <li>
                 Enhances Natural Beauty – Makeup highlights your best features
                 and brings out a polished look.
@@ -80,19 +82,20 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className=" bg-gray-50 py-10">
-        <div className="container mx-auto px-2 ">
-          <h1 className="text-3xl text-yellow-500 text-center">
+      {/* 2 section */}
+      <section className=" bg-brand-secondary py-5">
+        <div className="container  mx-auto px-2 ">
+          <h1 className="text-3xl text-brand-accent text-center">
             We Offer Discount
           </h1>
-          <p className="text-2xl text-gray-600 text-center py-2">
+          <p className="text-2xl text-brand-muted text-center py-2">
             Pamper yourself with flawless beauty! Enjoy an exclusive 20% off on
             all makeup services this month and glow like never before.
           </p>
 
           {/* card */}
           <div className="grid grid-cols-3 gap-6 items-start ">
-            <div className="rounded-lg bg-white w-100">
+            <div className="rounded-lg bg-brand-bg w-100">
               {/* card 1*/}
               <Card className="p-0 h-120">
                 <CardContent className="p-0 h-full">
@@ -106,13 +109,15 @@ export default function AboutPage() {
                 </CardContent>
               </Card>
               <div className="p-4 ">
-                <h3 className="text-lg font-semibold mb-2 ">Nail Art</h3>
-                <p className="text-sm mb-2 ">
+                <h3 className="text-lg font-semibold mb-2 text-brand-text ">
+                  Nail Art
+                </h3>
+                <p className="text-sm mb-2 text-brand-muted ">
                   Upgrade your nails with our limited-time discount
                 </p>
               </div>
             </div>
-            <div className="rounded-lg bg-white w-100">
+            <div className="rounded-lg bg-brand-bg w-100">
               {/* card 2 */}
               <Card className="p-0 h-120">
                 <CardContent className="p-0 h-full">
@@ -126,13 +131,15 @@ export default function AboutPage() {
                 </CardContent>
               </Card>
               <div className="p-4 ">
-                <h3 className="text-lg font-semibold mb-2 ">Hair Style</h3>
-                <p className="text-sm mb-2 ">
+                <h3 className="text-lg font-semibold mb-2  text-brand-text">
+                  Hair Style
+                </h3>
+                <p className="text-sm mb-2 text-brand-muted ">
                   Transform your hair with our limited-time discount
                 </p>
               </div>
             </div>
-            <div className="rounded-lg bg-white w-100">
+            <div className="rounded-lg bg-brand-bg w-100">
               {/* card 3*/}
               <Card className="p-0 h-120">
                 <CardContent className="p-0 h-full">
@@ -146,8 +153,10 @@ export default function AboutPage() {
                 </CardContent>
               </Card>
               <div className="p-4 ">
-                <h3 className="text-lg font-semibold mb-2 ">Make Up</h3>
-                <p className="text-sm mb-2 ">
+                <h3 className="text-lg font-semibold mb-2 text-brand-text ">
+                  Make Up
+                </h3>
+                <p className="text-sm mb-2 text-brand-muted ">
                   Enhance your beauty with our special makeup offer
                 </p>
               </div>
@@ -156,12 +165,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-white max-w-3xl mx-auto">
-        <div className="container mx-auto px-2 py-16 md:py-16 ">
-          <h1 className="text-3xl text-yellow-400 text-center font-semibold">
+      {/* 3 section */}
+      <section className="bg-brand-bg">
+        <div className="container max-w-3xl mx-auto  ">
+          <h1 className="text-3xl text-brand-accent text-center font-semibold m-2">
             Gallery
           </h1>
-          <p className="text-xl text-gray-500 text-center m-3">
+          <p className="text-xl text-brand-muted text-center m-3">
             "Makeup is more than colors—it's confidence, creativity, and the art
             of enhancing your natural beauty. Every shade, every brushstroke,
             brings out a version of you that shines with elegance and grace."
@@ -225,9 +235,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-gray-50">
+      {/* 4 section */}
+      <section className="bg-brand-secondary">
         <div className="center">
-          <h1 className="text-3xl text-yellow-400 text-center font-semibold py-5 ">
+          <h1 className="text-3xl text-brand-accent text-center font-semibold py-5 ">
             FeedBack by Customers
           </h1>
         </div>
@@ -236,10 +247,10 @@ export default function AboutPage() {
             <CarouselContent className="flex gap-3">
               {/* 1st Item*/}
               <CarouselItem className="p-2 basis-1/3 ">
-                <Card className="h-72">
+                <Card className="h-72 bg-brand-bg">
                   <CardContent className=" flex flex-col items-center justify-center h-full p-4 text-center">
-                    <div className=" flex mb-2 gap-1 p-3">
-                      <div className="relative w-4 h-4 inline-block">
+                    <div className=" flex mb-2 gap-1 p-3 text-brand-cta">
+                      <div className="relative w-4 h-4 inline-block ">
                         <p>*</p>
                       </div>
                       <div className="relative w-4 h-4 inline-block">
@@ -252,7 +263,7 @@ export default function AboutPage() {
                         <p>*</p>
                       </div>
                     </div>
-                    <p className="text-sm text-gray-700 py-5 ">
+                    <p className="text-sm text-brand-text py-5 ">
                       "Amazing service! Loved the makeup and hospitality."
                       "Amazing service! Loved the makeup and hospitality."
                     </p>
@@ -261,9 +272,9 @@ export default function AboutPage() {
               </CarouselItem>
               {/* 2nd item */}
               <CarouselItem className="p-2 basis-1/3">
-                <Card className="h-72">
+                <Card className="h-72 bg-brand-bg">
                   <CardContent className="flex flex-col items-center justify-center h-full p-6 text-center">
-                    <div className=" flex mb-2 gap-1 p-3">
+                    <div className=" flex mb-2 gap-1 p-3 text-brand-cta">
                       <div className="relative w-4 h-4 inline-block">
                         <p>*</p>
                       </div>
@@ -277,7 +288,7 @@ export default function AboutPage() {
                         <p>*</p>
                       </div>
                     </div>
-                    <p className="text-sm text-gray-700 py-5 ">
+                    <p className="text-sm text-brand-text py-5 ">
                       "Amazing service! Loved the makeup and hospitality."
                       "Amazing service! Loved the makeup and hospitality."
                     </p>
@@ -286,9 +297,9 @@ export default function AboutPage() {
               </CarouselItem>
               {/* 3rd item */}
               <CarouselItem className="p-2 basis-1/3">
-                <Card className="h-72">
+                <Card className="h-72 bg-brand-bg">
                   <CardContent className="flex flex-col items-center justify-center h-full p-6 text-center">
-                    <div className=" flex mb-2 gap-1 p-3">
+                    <div className=" flex mb-2 gap-1 p-3 text-brand-cta">
                       <div className="relative w-4 h-4 inline-block">
                         <p>*</p>
                       </div>
@@ -302,7 +313,7 @@ export default function AboutPage() {
                         <p>*</p>
                       </div>
                     </div>
-                    <p className="text-sm text-gray-700 py-5 ">
+                    <p className="text-sm text-brand-text py-5 ">
                       "Amazing service! Loved the makeup and hospitality."
                       "Amazing service! Loved the makeup and hospitality."
                     </p>
@@ -311,10 +322,10 @@ export default function AboutPage() {
               </CarouselItem>
               {/* 4th item */}
               <CarouselItem className="p-2 basis-1/3">
-                <Card className="h-72">
+                <Card className="h-72 bg-brand-bg">
                   <CardContent className="flex flex-col items-center justify-center h-full p-6 text-center">
-                    <div className=" flex mb-2 gap-1 p-3">
-                      <div className="relative w-4 h-4 inline-block">
+                    <div className=" flex mb-2 gap-1 p-3 text-brand-cta">
+                      <div className="relative w-4 h-4 inline-block text-brand-cta">
                         <p>*</p>
                       </div>
                       <div className="relative w-4 h-4 inline-block">
@@ -327,7 +338,7 @@ export default function AboutPage() {
                         <p>*</p>
                       </div>
                     </div>
-                    <p className="text-sm text-gray-700 py-5 ">
+                    <p className="text-sm text-brand-text py-5 ">
                       "Amazing service! Loved the makeup and hospitality."
                       "Amazing service! Loved the makeup and hospitality."
                     </p>
@@ -336,9 +347,9 @@ export default function AboutPage() {
               </CarouselItem>
               {/* 5th item */}
               <CarouselItem className="p-2 basis-1/3">
-                <Card className="h-72">
+                <Card className="h-72 bg-brand-bg">
                   <CardContent className="flex flex-col items-center justify-center h-full p-6 text-center">
-                    <div className=" flex mb-2 gap-1 p-3">
+                    <div className=" flex mb-2 gap-1 p-3 text-brand-cta">
                       <div className="relative w-4 h-4 inline-block">
                         <p>*</p>
                       </div>
@@ -352,7 +363,7 @@ export default function AboutPage() {
                         <p>*</p>
                       </div>
                     </div>
-                    <p className="text-sm text-gray-700 py-5 ">
+                    <p className="text-sm text-brand-text py-5 ">
                       "Amazing service! Loved the makeup and hospitality."
                       "Amazing service! Loved the makeup and hospitality."
                     </p>
@@ -361,9 +372,9 @@ export default function AboutPage() {
               </CarouselItem>
               {/* 6th item */}
               <CarouselItem className="p-2 basis-1/3">
-                <Card className="h-72">
+                <Card className="h-72 bg-brand-bg">
                   <CardContent className="flex flex-col items-center justify-center h-full p-6 text-center">
-                    <div className=" flex mb-2 gap-1 p-3">
+                    <div className=" flex mb-2 gap-1 p-3 text-brand-cta">
                       <div className="relative w-4 h-4 inline-block">
                         <p>*</p>
                       </div>
@@ -377,7 +388,7 @@ export default function AboutPage() {
                         <p>*</p>
                       </div>
                     </div>
-                    <p className="text-sm text-gray-700 py-12 ">
+                    <p className="text-sm text-brand-text py-12 ">
                       "Amazing service! Loved the makeup and hospitality."
                       "Amazing service! Loved the makeup and hospitality."
                     </p>
@@ -386,9 +397,9 @@ export default function AboutPage() {
               </CarouselItem>
               {/* 7th item */}
               <CarouselItem className="p-2 basis-1/3">
-                <Card className="h-72">
+                <Card className="h-72 bg-brand-bg">
                   <CardContent className="flex flex-col items-center justify-center h-full p-6 text-center">
-                    <div className=" flex mb-2 gap-1 p-3">
+                    <div className=" flex mb-2 gap-1 p-3 text-brand-cta">
                       <div className="relative w-4 h-4 inline-block">
                         <p>*</p>
                       </div>
@@ -402,7 +413,7 @@ export default function AboutPage() {
                         <p>*</p>
                       </div>
                     </div>
-                    <p className="text-sm text-gray-700 py-12 ">
+                    <p className="text-sm text-brand-text py-12 ">
                       "Amazing service! Loved the makeup and hospitality."
                       "Amazing service! Loved the makeup and hospitality."
                     </p>
