@@ -101,7 +101,7 @@ export default function HomePage() {
 
       {/* About the Salon */}
       <section className="py-20 bg-white">
-        <div className="max-w-8xl  6 mx-auto px-6 text-center">
+        <div className="max-w-7xl  mx-auto px-6 text-center">
           <Badge className="mb-4 bg-brand-cta text-white">Our Story</Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-brand-accent mb-8">
             Where Beauty Meets Artistry
