@@ -71,7 +71,7 @@ export default function Navbar() {
               </Link>
             </li>
 
-            {/* Services Dropdown */}
+            {/* Services Dropdown
             <li className="flex items-center gap-1">
               <Link
                 href="/services"
@@ -150,6 +150,61 @@ export default function Navbar() {
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
+            </li> */}
+
+            <li className="relative flex items-center gap-1 group">
+              {/* Main link for click */}
+              <Link
+                href="/services"
+                className={`font-semibold transition-colors duration-200 cursor-pointer hover:text-brand-cta ${
+                  isScrolled ? "text-brand-dark-3" : "text-brand-secondary"
+                }`}
+              >
+                Services
+                <ChevronDown className="inline-block ml-1 h-4 w-4" />
+              </Link>
+
+              {/* Dropdown menu on hover */}
+              <ul
+                className="absolute top-full left-0 mt-1 w-48 rounded shadow-md bg-brand-bg border border-brand-secondary
+                 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200"
+              >
+                <li className="px-4 py-2 hover:text-brand-cta">
+                  <Link href="/services/makeup" className="w-full block">
+                    Makeup Services
+                  </Link>
+                </li>
+                <li className="px-4 py-2 hover:text-brand-cta">
+                  <Link href="/services/hair" className="w-full block">
+                    Hair Services
+                  </Link>
+                </li>
+                <li className="px-4 py-2 hover:text-brand-cta">
+                  <Link href="/services/facial" className="w-full block">
+                    Skin Care Services
+                  </Link>
+                </li>
+                <li className="px-4 py-2 hover:text-brand-cta">
+                  <Link href="/services/nail" className="w-full block">
+                    Nail Services
+                  </Link>
+                </li>
+                <li className="px-4 py-2 hover:text-brand-cta">
+                  <Link href="/services/waxing" className="w-full block">
+                    Waxing & Hair Removal
+                  </Link>
+                </li>
+                <li className="px-4 py-2 hover:text-brand-cta">
+                  <Link href="/services/eye-lash" className="w-full block">
+                    Eye & Lash Services
+                  </Link>
+                </li>
+                <li className="px-4 py-2 hover:text-brand-cta">
+                  <Link href="/services/spa" className="w-full block">
+                    Spa & Massage Services
+                  </Link>
+                </li>
+              </ul>
             </li>
 
             <li>

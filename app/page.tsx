@@ -130,7 +130,13 @@ export default function HomePage() {
                 Discover More About Us
               </Button>
             </div>
-            <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-96" />
+            <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-96 overflow-hidden">
+              <img
+                src="/image/34.jpg"
+                alt="Hair Artistry"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -151,90 +157,184 @@ export default function HomePage() {
           {/* Gallery Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {/* 1 */}
-            <Card className="overflow-hidden group cursor-pointer border-0 shadow-lg hover:shadow-2xl transition-all duration-300">
-              <div className="aspect-square bg-gray-200 border-2 border-dashed relative overflow-hidden">
+            <Card className="overflow-hidden group cursor-pointer border-0 shadow-lg hover:shadow-2xl transition-all duration-300 p-0">
+              <div className="relative w-full h-full ">
+                <img
+                  src="/image/37.jpg"
+                  alt="before and after"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity flex gap-3">
+                {/* <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity flex gap-3">
                   <Instagram className="h-7 w-7 text-white drop-shadow-lg" />
                   <Youtube className="h-7 w-7 text-white drop-shadow-lg" />
-                </div>
+                </div> */}
               </div>
             </Card>
 
             {/* 2 */}
-            <Card className="overflow-hidden group cursor-pointer border-0 shadow-lg hover:shadow-2xl transition-all duration-300">
-              <div className="aspect-square bg-gray-200 border-2 border-dashed relative overflow-hidden">
+            <Card className="overflow-hidden group cursor-pointer border-0 shadow-lg hover:shadow-2xl transition-all duration-300 p-0">
+              <div className="relative w-full h-full">
+                {/* YouTube thumbnail as default */}
+                <img
+                  src="https://img.youtube.com/vi/dLgdFbIaij0/hqdefault.jpg"
+                  alt="Video thumbnail"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:opacity-0 transition-opacity duration-300"
+                />
+
+                {/* Video appears only on hover */}
+                <iframe
+                  src="https://www.youtube.com/embed/dLgdFbIaij0?autoplay=1&mute=1&loop=1&controls=0&playlist=dLgdFbIaij0"
+                  className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  allow="autoplay; encrypted-media"
+                ></iframe>
+
+                {/* for MP4 video only}
+                {/* <video
+                  src="https://www.youtube.com/watch?v=dLgdFbIaij0"
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                /> */}
+
+                {/* Gradient overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity flex gap-3">
-                  <Instagram className="h-7 w-7 text-white drop-shadow-lg" />
-                  <Youtube className="h-7 w-7 text-white drop-shadow-lg" />
-                </div>
+
+                {/* <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity flex gap-3">
+                    <Instagram className="h-7 w-7 text-white drop-shadow-lg" />
+                    <Youtube className="h-7 w-7 text-white drop-shadow-lg" />
+                  </div> */}
               </div>
             </Card>
 
             {/* 3 */}
-            <Card className="overflow-hidden group cursor-pointer border-0 shadow-lg hover:shadow-2xl transition-all duration-300">
-              <div className="aspect-square bg-gray-200 border-2 border-dashed relative overflow-hidden">
+            <Card className="overflow-hidden group cursor-pointer border-0 shadow-lg hover:shadow-2xl transition-all duration-300 p-0">
+              <div className="relative w-full h-full">
+                {/* YouTube thumbnail as default */}
+                <img
+                  src="https://img.youtube.com/vi/Y4kpbLwT8R8/hqdefault.jpg"
+                  alt="Video thumbnail"
+                  className="w-full h-full object-cover group-hover:opacity-0 transition-opacity duration-300"
+                />
+
+                {/* Video appears only on hover */}
+                <iframe
+                  src="https://www.youtube.com/embed/Y4kpbLwT8R8?autoplay=1&mute=1&loop=1&controls=0&playlist=Y4kpbLwT8R8"
+                  className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  allow="autoplay; encrypted-media"
+                ></iframe>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity flex gap-3">
+                {/* <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity flex gap-3">
                   <Instagram className="h-7 w-7 text-white drop-shadow-lg" />
                   <Youtube className="h-7 w-7 text-white drop-shadow-lg" />
-                </div>
+                </div> */}
               </div>
             </Card>
 
             {/* 4 */}
-            <Card className="overflow-hidden group cursor-pointer border-0 shadow-lg hover:shadow-2xl transition-all duration-300">
-              <div className="aspect-square bg-gray-200 border-2 border-dashed relative overflow-hidden">
+            <Card className="overflow-hidden group cursor-pointer border-0 shadow-lg hover:shadow-2xl transition-all duration-300 p-0">
+              <div className="relative w-full h-full">
+                <img
+                  src="/image/37.jpg"
+                  alt="before and after"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity flex gap-3">
+                {/* <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity flex gap-3">
                   <Instagram className="h-7 w-7 text-white drop-shadow-lg" />
                   <Youtube className="h-7 w-7 text-white drop-shadow-lg" />
-                </div>
+                </div> */}
               </div>
             </Card>
 
             {/* 5 */}
-            <Card className="overflow-hidden group cursor-pointer border-0 shadow-lg hover:shadow-2xl transition-all duration-300">
-              <div className="aspect-square bg-gray-200 border-2 border-dashed relative overflow-hidden">
+            <Card className="overflow-hidden group cursor-pointer border-0 shadow-lg hover:shadow-2xl transition-all duration-300 p-0">
+              <div className="relative w-full h-full">
+                {/* YouTube thumbnail as default */}
+                <img
+                  src="https://img.youtube.com/vi/Y4kpbLwT8R8/hqdefault.jpg"
+                  alt="Video thumbnail"
+                  className="w-full h-full object-cover group-hover:opacity-0 transition-opacity duration-300"
+                />
+
+                {/* Video appears only on hover */}
+                <iframe
+                  src="https://www.youtube.com/embed/Y4kpbLwT8R8?autoplay=1&mute=1&loop=1&controls=0&playlist=Y4kpbLwT8R8"
+                  className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  allow="autoplay; encrypted-media"
+                ></iframe>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity flex gap-3">
+                {/* <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity flex gap-3">
                   <Instagram className="h-7 w-7 text-white drop-shadow-lg" />
                   <Youtube className="h-7 w-7 text-white drop-shadow-lg" />
-                </div>
+                </div> */}
               </div>
             </Card>
 
             {/* 6 */}
-            <Card className="overflow-hidden group cursor-pointer border-0 shadow-lg hover:shadow-2xl transition-all duration-300">
-              <div className="aspect-square bg-gray-200 border-2 border-dashed relative overflow-hidden">
+            <Card className="overflow-hidden group cursor-pointer border-0 shadow-lg hover:shadow-2xl transition-all duration-300 p-0">
+              <div className="relative w-full h-full">
+                {/* YouTube thumbnail as default */}
+                <img
+                  src="https://img.youtube.com/vi/dLgdFbIaij0/hqdefault.jpg"
+                  alt="Video thumbnail"
+                  className="w-full h-full object-cover group-hover:opacity-0 transition-opacity duration-300"
+                />
+
+                {/* Video appears only on hover */}
+                <iframe
+                  src="https://www.youtube.com/embed/dLgdFbIaij0?autoplay=1&mute=1&loop=1&controls=0&playlist=dLgdFbIaij0"
+                  className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  allow="autoplay; encrypted-media"
+                ></iframe>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity flex gap-3">
+                {/* <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity flex gap-3">
                   <Instagram className="h-7 w-7 text-white drop-shadow-lg" />
                   <Youtube className="h-7 w-7 text-white drop-shadow-lg" />
-                </div>
+                </div> */}
               </div>
             </Card>
 
             {/* 7 */}
-            <Card className="overflow-hidden group cursor-pointer border-0 shadow-lg hover:shadow-2xl transition-all duration-300">
-              <div className="aspect-square bg-gray-200 border-2 border-dashed relative overflow-hidden">
+            <Card className="overflow-hidden group cursor-pointer border-0 shadow-lg hover:shadow-2xl transition-all duration-300 p-0">
+              <div className="relative w-full h-full">
+                <img
+                  src="/image/37.jpg"
+                  alt="before and after"
+                  className="w-full h-full object-cover"
+                />
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity flex gap-3">
+                {/* <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity flex gap-3">
                   <Instagram className="h-7 w-7 text-white drop-shadow-lg" />
                   <Youtube className="h-7 w-7 text-white drop-shadow-lg" />
-                </div>
+                </div> */}
               </div>
             </Card>
 
             {/* 8 */}
-            <Card className="overflow-hidden group cursor-pointer border-0 shadow-lg hover:shadow-2xl transition-all duration-300">
-              <div className="aspect-square bg-gray-200 border-2 border-dashed relative overflow-hidden">
+            <Card className="overflow-hidden group cursor-pointer border-0 shadow-lg hover:shadow-2xl transition-all duration-300 p-0">
+              <div className="relative h-full w-full">
+                {/* YouTube thumbnail as default */}
+                <img
+                  src="https://img.youtube.com/vi/dLgdFbIaij0/hqdefault.jpg"
+                  alt="Video thumbnail"
+                  className="w-full h-full object-cover group-hover:opacity-0 transition-opacity duration-300"
+                />
+
+                {/* Video appears only on hover */}
+                <iframe
+                  src="https://www.youtube.com/embed/dLgdFbIaij0?autoplay=1&mute=1&loop=1&controls=0&playlist=dLgdFbIaij0"
+                  className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  allow="autoplay; encrypted-media"
+                ></iframe>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity flex gap-3">
+                {/* <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity flex gap-3">
                   <Instagram className="h-7 w-7 text-white drop-shadow-lg" />
                   <Youtube className="h-7 w-7 text-white drop-shadow-lg" />
-                </div>
+                </div> */}
               </div>
             </Card>
           </div>
@@ -259,13 +359,19 @@ export default function HomePage() {
             {/* 1 — Hair Artistry */}
             <Card className="border-0 shadow-xl hover:shadow-2xl transition-shadow">
               <CardHeader>
-                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 mb-4" />
+                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 mb-4 overflow-hidden">
+                  <img
+                    src="/image/33.jpg"
+                    alt="Hair artistry"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <CardTitle className="text-2xl text-brand-accent">
                   Hair Artistry
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-lg text-brand-muted flex items-center">
+                <CardDescription className="text-lg text-brand-muted flex flex-wrap gap-2 items-center">
                   <span className="flex items-center ">
                     <Dot className="h-4 w-4 text-brand-muted" />
                     Balayage
@@ -286,26 +392,32 @@ export default function HomePage() {
                     Bridal
                   </span>
                 </CardDescription>
-                <Button
-                  variant="link"
-                  className="mt-4 text-brand-cta p-0 flex items-center gap-1"
-                >
-                  Explore
-                  <ChevronRight className="h-4 w-4" />
-                </Button>
+                <Link href="/services/hair-artistry" passHref>
+                  <Button variant="link" className="mt-4 text-brand-cta p-0">
+                    Explore
+                    <ChevronRight className="h-4 w-4" />
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
 
             {/* 2 — Flawless Makeup */}
             <Card className="border-0 shadow-xl hover:shadow-2xl transition-shadow">
               <CardHeader>
-                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 mb-4" />
+                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 mb-4 overflow-hidden">
+                  <img
+                    src="/image/35.jpg"
+                    alt="Flawless makeup"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
                 <CardTitle className="text-2xl text-brand-accent">
                   Flawless Makeup
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-lg text-brand-muted flex items-center">
+                <CardDescription className="text-lg text-brand-muted flex flex-wrap gap-2 items-center">
                   <span className="flex items-center ">
                     <Dot className="h-4 w-4 text-brand-muted" />
                     Airbrush
@@ -320,22 +432,31 @@ export default function HomePage() {
                     Special Events
                   </span>
                 </CardDescription>
-                <Button variant="link" className="mt-4 text-brand-cta p-0">
-                  Explore →
-                </Button>
+                <Link href="/services/flawless-makeup" passHref>
+                  <Button variant="link" className="mt-4 text-brand-cta p-0">
+                    Explore
+                    <ChevronRight className="h-4 w-4" />
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
 
             {/* 3 — Skin & Wellness */}
             <Card className="border-0 shadow-xl hover:shadow-2xl transition-shadow">
               <CardHeader>
-                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 mb-4" />
+                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 mb-4 overflow-hidden">
+                  <img
+                    src="/image/36.jpg"
+                    alt="Flawless makeup"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <CardTitle className="text-2xl text-brand-accent">
                   Skin & Wellness
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-lg text-brand-muted flex items-center ">
+                <CardDescription className="text-lg text-brand-muted flex flex-wrap gap-2 items-center ">
                   <span className="flex items-center ">
                     <Dot className="h-4 w-4 text-brand-muted" />
                     Hydrafacial
@@ -351,13 +472,12 @@ export default function HomePage() {
                     Massage Rituals
                   </span>
                 </CardDescription>
-
-                {/* <CardDescription className="text-lg text-brand-muted">
-                  Hydrafacial • Guinot • Massage Rituals
-                </CardDescription> */}
-                <Button variant="link" className="mt-4 text-brand-cta p-0">
-                  Explore →
-                </Button>
+                <Link href="/services/skin-wellness" passHref>
+                  <Button variant="link" className="mt-4 text-brand-cta p-0">
+                    Explore
+                    <ChevronRight className="h-4 w-4" />
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>
@@ -476,7 +596,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Final CTA */}
+      {/*  CTA */}
       <section className="py-20 bg-brand-cta text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-2xl 4 md:text-5xl font-bold mb-6">
