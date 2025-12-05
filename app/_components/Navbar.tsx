@@ -71,6 +71,17 @@ export default function Navbar() {
               </Link>
             </li>
 
+            <li>
+              <Link
+                href="/product"
+                className={`font-semibold transition-colors duration-200 cursor-pointer hover:text-brand-cta ${
+                  isScrolled ? "text-brand-dark-3" : "text-brand-secondary"
+                }`}
+              >
+                Product
+              </Link>
+            </li>
+
             {/* Services Dropdown
             <li className="flex items-center gap-1">
               <Link
