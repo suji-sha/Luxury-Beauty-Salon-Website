@@ -6,10 +6,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Dot } from "lucide-react";
 
-{
-  /* json detail*/
-}
+/* json detail*/
 export const products = [
   {
     id: 1,
@@ -190,62 +189,100 @@ export default function ProductPage() {
             </div>
           </div>
         </section>
+
         {/* Product Grid */}
         <section className="bg-brand-secondary py-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-10 max-w-6xl mx-auto">
-            {products.map((product) => (
-              <Card
-                key={product.id}
-                className="overflow-hidden group cursor-pointer border-0 shadow-lg py-0 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 rounded-lg"
-              >
-                <CardHeader className="px-0">
-                  <div className="relative w-full aspect-square">
-                    <img
-                      src={product.image}
-                      alt={product.title}
-                      className="object-cover rounded-t-lg w-full h-85 group-hover:scale-110 transition-all duration-500"
-                    />
-                  </div>
-
-                  <CardTitle className="text-base font-semibold px-2 mt-2">
-                    {product.title}
+          <div className="flex min-h-screen">
+            {/* left side */}
+            <div className="w-xl m-10">
+              <Card className="max-w-2xl mx-auto items-start border-0 shadow-xl hover:shadow-2xl transition-shadow py-0">
+                <CardHeader>
+                  <CardTitle className="text-2xl text-brand-accent">
+                    Category
                   </CardTitle>
                 </CardHeader>
-
-                <CardContent className="px-2 pb-4 space-y-1">
-                  <span className="text-brand-muted text-sm block">
-                    <strong>Category:</strong> {product.category}
-                  </span>
-
-                  {product.idealFor && (
-                    <span className="text-brand-muted text-sm block">
-                      <strong>Ideal For:</strong> {product.idealFor}
-                    </span>
-                  )}
-
-                  <div className="mt-2 space-y-1">
-                    <p className="text-brand-cta text-sm font-medium">
-                      Product Details:
-                    </p>
-
-                    <ul className="text-brand-muted text-sm list-disc list-inside space-y-1">
-                      {product.details.map((d, index) => (
-                        <li key={index}>{d}</li>
-                      ))}
+                <CardContent>
+                  <CardDescription className="text-lg text-brand-muted flex flex-wrap gap-2 items-center">
+                    <ul>
+                      <li>Skin Care</li>
+                      <span className="flex items-center ">
+                        <Dot className="h-4 w-4 text-brand-muted" />
+                        Serum
+                      </span>
+                      <span className="flex items-center ">
+                        <Dot className="h-4 w-4 text-brand-muted" />
+                        Moisturizer
+                      </span>
+                      <span className="flex items-center ">
+                        <Dot className="h-4 w-4 text-brand-muted" />
+                        Toner
+                      </span>
+                      <span className="flex items-center ">
+                        <Dot className="h-4 w-4 text-brand-muted" />
+                        Mask
+                      </span>
                     </ul>
-                  </div>
-
-                  <div className="mt-3">
-                    <p className="text-sm font-semibold text-brand-dark-2">
-                      Price: {product.price}
-                    </p>
-                    <p className="text-sm text-brand-muted">
-                      Size: {product.size}
-                    </p>
-                  </div>
+                  </CardDescription>
                 </CardContent>
               </Card>
-            ))}
+            </div>
+
+            {/* right side */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-10 max-w-6xl flex-1">
+              {products.map((product) => (
+                <Card
+                  key={product.id}
+                  className="overflow-hidden group cursor-pointer border-0 shadow-lg py-0 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 rounded-lg"
+                >
+                  <CardHeader className="px-0">
+                    <div className="relative w-full aspect-square">
+                      <img
+                        src={product.image}
+                        alt={product.title}
+                        className="object-cover rounded-t-lg w-full h-85 group-hover:scale-110 transition-all duration-500"
+                      />
+                    </div>
+
+                    <CardTitle className="text-base font-semibold px-2 mt-2">
+                      {product.title}
+                    </CardTitle>
+                  </CardHeader>
+
+                  <CardContent className="px-2 pb-4 space-y-1">
+                    <span className="text-brand-muted text-sm block">
+                      <strong>Category:</strong> {product.category}
+                    </span>
+
+                    {product.idealFor && (
+                      <span className="text-brand-muted text-sm block">
+                        <strong>Ideal For:</strong> {product.idealFor}
+                      </span>
+                    )}
+
+                    <div className="mt-2 space-y-1">
+                      <p className="text-brand-cta text-sm font-medium">
+                        Product Details:
+                      </p>
+
+                      <ul className="text-brand-muted text-sm list-disc list-inside space-y-1">
+                        {product.details.map((d, index) => (
+                          <li key={index}>{d}</li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="mt-3">
+                      <p className="text-sm font-semibold text-brand-dark-2">
+                        Price: {product.price}
+                      </p>
+                      <p className="text-sm text-brand-muted">
+                        Size: {product.size}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </section>
       </div>
